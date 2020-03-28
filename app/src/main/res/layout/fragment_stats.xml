@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/montserrat"
-            android:paddingTop="20dp"
+            android:layout_marginTop="20dp"
             android:text="@string/corona_cases"
             android:textColor="@color/grayStats"
             android:textSize="24sp" />
@@ -30,12 +30,55 @@
             android:text="-"
             android:textColor="@color/purpleGradient"
             android:textSize="44sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="200dp"
+            android:text="@string/deaths"
+            android:textColor="@color/grayStats"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/total_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="230dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="-"
+            android:textColor="@color/purpleGradient"
+            android:textSize="44sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="380dp"
+            android:text="@string/recovered"
+            android:textColor="@color/grayStats"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/total_recovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="410dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="-"
+            android:textColor="@color/purpleGradient"
+            android:textSize="44sp" />
+
         <Button
             android:id="@+id/getBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Get Data"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"/>
+            android:layout_marginTop="480dp"/>
     </RelativeLayout>
 </ScrollView>

@@ -25,6 +25,8 @@ import org.jsoup.select.Elements;
 public class StatsFragment extends Fragment {
 
     private TextView cases;
+    private TextView deaths;
+    private TextView recovered;
     private Button getBtn;
 
     public StatsFragment() {
@@ -38,6 +40,8 @@ public class StatsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_stats, container, false);
         cases = (TextView) view.findViewById(R.id.total_cases);
+        deaths = (TextView) view.findViewById(R.id.total_deaths);
+        recovered = (TextView) view.findViewById(R.id.total_recovered);
         getBtn = (Button) view.findViewById(R.id.getBtn);
         getBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,22 +56,30 @@ public class StatsFragment extends Fragment {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                final StringBuilder builder = new StringBuilder();
+                final StringBuilder mainCasesBuilder = new StringBuilder();
+                final StringBuilder mainDeathsBuilder = new StringBuilder();
+                final StringBuilder mainRecoveredBuilder = new StringBuilder();
                 try {
                     Document doc = Jsoup.connect("https://www.worldometers.info/coronavirus").get();
                     Elements mainNumbers = doc.getElementsByClass("maincounter-number");
                     String mainCases = mainNumbers.get(0).getElementsByClass("maincounter-number").text();
                     String mainDeaths = mainNumbers.get(1).getElementsByClass("maincounter-number").text();
                     String mainRecovered = mainNumbers.get(2).getElementsByClass("maincounter-number").text();
-                    builder.append(mainCases);
+                    mainCasesBuilder.append(mainCases);
+                    mainDeathsBuilder.append(mainDeaths);
+                    mainRecoveredBuilder.append(mainRecovered);
                 } catch (IOException e) {
-                    builder.append("Error :").append(e.getMessage()).append("\n");
+                    mainCasesBuilder.append(getString(R.string.check_net));
+                    mainDeathsBuilder.append(getString(R.string.check_net));
+                    mainRecoveredBuilder.append(getString(R.string.check_net));
                 }
 
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        cases.setText(builder.toString());
+                        cases.setText(mainCasesBuilder);
+                        deaths.setText(mainDeathsBuilder);
+                        recovered.setText(mainRecoveredBuilder);
                     }
                 });
             }
