@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         tabSymptoms = findViewById(R.id.tabSymptoms);
         tabNews = findViewById(R.id.tabNews);
         viewPager = findViewById(R.id.viewPager);
-        /*tabLayout.setupWithViewPager(viewPager);*/
+//        tabLayout.setupWithViewPager(viewPager);
 
         pageAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);

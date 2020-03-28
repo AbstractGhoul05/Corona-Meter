@@ -10,6 +10,13 @@
     <string name="deaths">Deaths</string>
     <string name="recovered">Recovered</string>
     <string name="check_net">Check your internet connection or refresh</string>
+    <string name="active_cases">Active Cases</string>
+    <string name="current_infected">Currently Infected Patients</string>
+    <string name="mild_condition">in Mild Condition</string>
+    <string name="serious_critical">Serious or Critical</string>
+    <string name="closed_cases">Closed Cases</string>
+    <string name="cases_had_outcome">Cases which had an outcome</string>
+    <string name="recovered_discharges">Recovered / Discharged</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

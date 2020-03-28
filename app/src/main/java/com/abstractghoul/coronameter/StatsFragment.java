@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class StatsFragment extends Fragment {
     private TextView deaths;
     private TextView recovered;
     private Button getBtn;
+    private SwipeRefreshLayout mySwipeLayout;
 
     public StatsFragment() {
         // Required empty public constructor
@@ -43,12 +45,20 @@ public class StatsFragment extends Fragment {
         deaths = (TextView) view.findViewById(R.id.total_deaths);
         recovered = (TextView) view.findViewById(R.id.total_recovered);
         getBtn = (Button) view.findViewById(R.id.getBtn);
+        getData();
         getBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getData();
             }
         });
+//        mySwipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.swiperefresh);
+//        mySwipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                getData();
+//            }
+//        });
         return view;
     }
 

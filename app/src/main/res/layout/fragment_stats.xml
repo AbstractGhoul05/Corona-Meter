@@ -10,22 +10,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+<!--        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--            xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--            android:id="@+id/swiperefresh"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_width="match_parent">-->
+
+<!--            <ListView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" />-->
+
+<!--        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/montserrat"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="85dp"
+            android:paddingLeft="75dp"
+            android:paddingRight="75dp"
             android:text="@string/corona_cases"
             android:textColor="@color/grayStats"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:background="@drawable/stats_bubble" />
 
         <TextView
             android:id="@+id/total_cases"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="100dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="-"
             android:textColor="@color/purpleGradient"
@@ -36,17 +53,22 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/montserrat"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="230dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="85dp"
+            android:paddingLeft="138dp"
+            android:paddingRight="138dp"
             android:text="@string/deaths"
             android:textColor="@color/grayStats"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:background="@drawable/stats_bubble" />
 
         <TextView
             android:id="@+id/total_deaths"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="280dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="-"
             android:textColor="@color/purpleGradient"
@@ -57,28 +79,44 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/montserrat"
-            android:layout_marginTop="380dp"
+            android:layout_marginTop="410dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="85dp"
+            android:paddingLeft="117dp"
+            android:paddingRight="117dp"
             android:text="@string/recovered"
             android:textColor="@color/grayStats"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:background="@drawable/stats_bubble" />
 
         <TextView
             android:id="@+id/total_recovered"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="410dp"
+            android:layout_marginTop="460dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="-"
             android:textColor="@color/purpleGradient"
             android:textSize="44sp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/active_cases"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp"
+            android:layout_marginTop="570dp"
+            android:fontFamily="@font/montserrat" />
+
+
+
         <Button
             android:id="@+id/getBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Get Data"
+            android:text="Refresh"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="480dp"/>
+            android:layout_marginTop="700dp"/>
     </RelativeLayout>
 </ScrollView>
