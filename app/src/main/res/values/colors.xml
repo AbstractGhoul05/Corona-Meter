@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="purpleGradient">#9E00F9</color>
+    <color name="blueGradient">#4FB7FC</color>
+    <color name="tabYelllow">#FFFF00</color>
+    <color name="tabWhite">#FFFFFF</color>
+    <color name="backGradientBlue">#334FB7FC</color>
+    <color name="backGradientPurple">#339E00F9</color>
+    <color name="grayStats">#707070</color>
+</resources>
